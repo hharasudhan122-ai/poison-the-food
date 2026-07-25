@@ -1,13 +1,13 @@
 :root {
-  --bg: #170b23;
-  --bg-deep: #0f0619;
-  --surface: #241335;
+  --bg: #000000;
+  --bg-deep: #020005;
+  --surface: #000000;
   --surface-2: #050108;
   --line: #100918;
   --text: #f5f0ff;
   --muted: #a794c4;
   --toxic: #cbe312;
-  --toxic-dim: #dceb07;
+  --toxic-dim: #eeff00;
   --danger: #ff4d6d;
   --danger-dim: #7a2436;
   --warm: #ffb347;
