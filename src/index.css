@@ -1,28 +1,21 @@
 :root {
-  :root {
-    --bg: #000000;
-    --bg-deep: #050502;
-    --surface: #0c0c04;
-    --surface-2: #171609;
-    --line: #2a280f;
-    --text: #fffef2;
-    --muted: #a39d74;
-    --toxic: #ffe600;
-    --toxic-dim: #b89a00;
-    --danger: #ff3355;
-    --danger-dim: #5c101e;
-    --warm: #ffa700;
-    --host: #ffe600;
-    --guest: #00e5ff;
-  }
+  --bg: #000000;
+  --bg-deep: #050502;
+  --surface: #0c0c04;
+  --surface-2: #171609;
+  --line: #2a280f;
+  --text: #fffef2;
+  --muted: #a39d74;
+  --toxic: #ffe600;
+  --toxic-dim: #b89a00;
+  --danger: #ff3355;
+  --danger-dim: #5c101e;
+  --warm: #ffa700;
+  --host: #ffe600;
+  --guest: #00e5ff;
 
-
-  --font-display: 'Fredoka',
-  system-ui,
-  sans-serif;
-  --font-mono: 'JetBrains Mono',
-  ui-monospace,
-  monospace;
+  --font-display: 'Fredoka', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
 }
 
 * {
@@ -64,7 +57,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  filter: brightness(0.65) contrast(1.1);
+  filter: brightness(0.7) contrast(1.1);
 }
 
 .bg-video-overlay {
@@ -74,9 +67,9 @@ body {
   width: 100%;
   height: 100%;
   background:
-    radial-gradient(circle at 15% 0%, rgba(42, 22, 64, 0.55) 0%, transparent 55%),
-    radial-gradient(circle at 85% 100%, rgba(36, 21, 47, 0.65) 0%, transparent 60%),
-    rgba(15, 6, 25, 0.5);
+    radial-gradient(circle at 15% 0%, rgba(25, 22, 0, 0.4) 0%, transparent 55%),
+    radial-gradient(circle at 85% 100%, rgba(10, 10, 0, 0.6) 0%, transparent 60%),
+    rgba(0, 0, 0, 0.4);
   pointer-events: none;
 }
 
@@ -162,14 +155,14 @@ input {
 }
 
 .card {
-  background: rgba(36, 19, 53, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(12, 12, 5, 0.88);
+  border: 1px solid rgba(255, 230, 0, 0.25);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-radius: 18px;
   padding: 28px;
   width: 100%;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(255, 230, 0, 0.05);
 }
 
 .error-banner {
@@ -258,7 +251,7 @@ input {
 }
 
 .btn-secondary:hover:not(:disabled) {
-  background: rgba(195, 255, 61, 0.1);
+  background: rgba(255, 230, 0, 0.12);
 }
 
 .btn-ghost {
@@ -299,7 +292,7 @@ input {
 .pack-card.selected {
   border-color: var(--toxic);
   color: var(--toxic);
-  background: rgba(195, 255, 61, 0.08);
+  background: rgba(255, 230, 0, 0.1);
 }
 
 .pack-thumb {
