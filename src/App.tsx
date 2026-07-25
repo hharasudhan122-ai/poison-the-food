@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { useMatch } from './hooks/useMatch';
+import { BackgroundVideo } from './components/BackgroundVideo';
 import { Lobby } from './components/Lobby';
 import { WaitingRoom } from './components/WaitingRoom';
 import { PoisonPhase } from './components/PoisonPhase';
@@ -40,7 +41,9 @@ export default function App() {
   const showToss = phase === 'playing' && tossWinner !== null;
 
   return (
-    <div className="shell">
+    <>
+      <BackgroundVideo />
+      <div className="shell">
       <div className="brand">
         <h1>
           Poison<span className="drip">Plate</span>
@@ -82,6 +85,7 @@ export default function App() {
           {error && phase !== 'lobby' && <div className="error-banner">{error}</div>}
         </>
       )}
-    </div>
+      </div>
+    </>
   );
 }

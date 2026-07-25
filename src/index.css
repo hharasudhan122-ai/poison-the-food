@@ -30,13 +30,47 @@ body,
 
 body {
   margin: 0;
-  background:
-    radial-gradient(circle at 15% 0%, #2a1640 0%, transparent 45%),
-    radial-gradient(circle at 85% 100%, #24152f 0%, transparent 50%),
-    var(--bg);
+  background: var(--bg);
   color: var(--text);
   font-family: var(--font-mono);
   -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- background video ---------- */
+
+.bg-video-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -10;
+  pointer-events: none;
+}
+
+.bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: brightness(0.65) contrast(1.1);
+}
+
+.bg-video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(circle at 15% 0%, rgba(42, 22, 64, 0.55) 0%, transparent 55%),
+    radial-gradient(circle at 85% 100%, rgba(36, 21, 47, 0.65) 0%, transparent 60%),
+    rgba(15, 6, 25, 0.5);
+  pointer-events: none;
 }
 
 #root {
@@ -91,6 +125,8 @@ input {
   max-width: 720px;
   margin: 0 auto;
   width: 100%;
+  position: relative;
+  z-index: 1;
 }
 
 .brand {
@@ -104,6 +140,7 @@ input {
   font-size: 30px;
   font-weight: 700;
   color: var(--text);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .brand .drip {
@@ -118,11 +155,14 @@ input {
 }
 
 .card {
-  background: var(--surface);
-  border: 1px solid var(--line);
+  background: rgba(36, 19, 53, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-radius: 18px;
   padding: 28px;
   width: 100%;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
 }
 
 .error-banner {
